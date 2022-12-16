@@ -1,0 +1,133 @@
+
+//----USER ENDPOINT-----//
+//Create User
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "john@gmail.com",
+    "password": "abcd",
+    "confPassword": "abcd",
+    "role": "user"
+}
+
+###
+//Get All Users
+GET http://localhost:5000/users
+
+###
+//Get SIngle User
+GET http://localhost:5000/users/a993fe54-013a-445b-bf8e-fae2feaaf908
+
+###
+//Update
+PATCH http://localhost:5000/users/a993fe54-013a-445b-bf8e-fae2feaaf908
+Content-Type: application/json
+
+{
+    "name": "John Doe Updated 1",
+    "email": "john@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+###
+//Delete
+DELETE http://localhost:5000/users/0dc1e56b-f9cc-4511-9223-1699726c1e20
+
+
+
+
+
+//-----AUTH ENDPOINT-----//
+###
+//Login
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "123456"
+}
+
+###
+//Login User
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "john@gmail.com",
+    "password": "abcd"
+}
+
+###
+//Get Me
+GET http://localhost:5000/me
+
+###
+//Log Out
+DELETE http://localhost:5000/logout
+
+
+
+
+
+//-----PRODUCT ENDPOINT------//
+###
+// Get all product
+GET http://localhost:5000/products
+
+###
+// Get all product by Id
+GET http://localhost:5000/products/d9685877-bd26-4d4f-adb9-b11ed36668f6
+
+###
+// Post Product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "Product 6",
+    "price": "487"
+}
+
+###
+// Update Product
+PATCH http://localhost:5000/products/6d6555ac-a526-4171-b268-4b1cb51e349b
+Content-Type: application/json
+
+{
+    "name": "Product Updated",
+    "price": "881"
+}
+
+###
+// Delete Product
+DELETE http://localhost:5000/products/6d6555ac-a526-4171-b268-4b1cb51e349b
+Content-Type: application/json
+
+{
+    "name": "Product Updated",
+    "price": "881"
+}
+
+
+
+
+//------CREATORS ENDPOINT-------//
+###
+// Get all Creators
+GET http://localhost:5000/creators
+
+###
+// Create Creator
+POST http://localhost:5000/creators
+Content-Type: application/json
+
+{
+    "title": "Creator Title 1",
+    "link": "Link1//",
+    "creators": "create name1, create name2"
+}
